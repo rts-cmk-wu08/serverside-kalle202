@@ -3,7 +3,7 @@ import { CiUser, CiSearch, CiShoppingCart, CiHeart } from "react-icons/ci";
 
 export default function Nav() {
   return (
-    <nav className="grid grid-cols-3 items-center absolute w-full z-50 text-white h-16 text-lg">
+    <nav className="grid grid-cols-3 items-center absolute w-full z-50 h-16 text-lg">
       <ul className="grid grid-cols-5 justify-items-center ">
         <li>
           <Link href="/">HOME</Link>
@@ -15,10 +15,10 @@ export default function Nav() {
           <Link href="/shop">SHOP</Link>
         </li>
         <li>
-          <Link href="/blogs">BLOGS</Link>
+          <Link href="/blog">BLOGS*</Link>
         </li>
         <li>
-          <Link href="/contact">CONTACT</Link>
+          <Link href="/contact">CONTACT*</Link>
         </li>
       </ul>
       <div className="grid grid-cols-1 justify-items-center">
@@ -48,13 +48,21 @@ export default function Nav() {
           </Link>
         </li>
         <li>
-          <Link href="/favorites">
+          <Link
+            href="/favorites"
+            className="flex"
+          >
             <CiHeart className="w-6 h-6" />
+            (0)
           </Link>
         </li>
         <li>
-          <Link href="/cart">
+          <Link
+            href="/cart"
+            className="flex"
+          >
             <CiShoppingCart className="w-6 h-6" />
+            (0)
           </Link>
         </li>
       </ul>
